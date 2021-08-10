@@ -31,7 +31,7 @@ public class MapOneToOne {
 		
 		Answer answer1=new Answer();
 		answer1.setAnswerId(222);
-		answer1.setAnswer("it is a alphabate");
+		answer1.setAnswer("it is an alphabate ");
 		answer1.setQuest(q1);
 		q1.setAnswer(answer1);
 		
