@@ -1,7 +1,5 @@
 package com.MyHibernateGradle.Fourth;
 
-import java.io.Closeable;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

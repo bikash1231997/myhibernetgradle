@@ -21,5 +21,8 @@ bin
 *.log
 bin/
 gradle/
-
+.classpath
+.gitattributes
+.project
+.settings
 

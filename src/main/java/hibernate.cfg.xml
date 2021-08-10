@@ -18,6 +18,8 @@
 		<mapping class="com.MyHibernateGradle.First.student" />
 		<mapping class="com.MyHibernateGradle.Fourth.MyOneToOne" />
 		<mapping class="com.MyHibernateGradle.Fourth.Answer" />
+		<mapping class="com.MyHibernateGradle.Fifth.Answernew" />
+		<mapping class="com.MyHibernateGradle.Fifth.Questions" />
 
 	</session-factory>
 </hibernate-configuration>

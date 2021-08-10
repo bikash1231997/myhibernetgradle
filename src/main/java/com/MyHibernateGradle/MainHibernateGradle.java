@@ -1,7 +1,6 @@
 package com.MyHibernateGradle;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
@@ -28,6 +27,7 @@ public class MainHibernateGradle {
 
 		LocalDateTime nowdate = LocalDateTime.now();
 		
+		@SuppressWarnings("resource")
 		FileInputStream file = new FileInputStream("/home/axelor/backup/2021-04-15.jpg");
 		byte[] photos=new byte[file.available()];
 		file.read(photos);
