@@ -46,6 +46,7 @@ public class MainHibernateGradle {
 		Session session = factory.openSession();
 
 		// session.beginTransaction();
+		//abc
 		Transaction tx = session.beginTransaction();
 
 		session.save(st);
