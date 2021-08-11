@@ -13,7 +13,7 @@ import javax.persistence.Lob;
 @Entity
 //@Entity(name="Student_Details")
 //@Table(name="student_datails")
-public class student {
+public class studentFirst {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,11 +42,6 @@ public class student {
 	@Column(name = "student_photo")
 	@Lob
 	private byte[] photo;
-
-	public student() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	public int getId() {
 		return id;
@@ -112,8 +107,15 @@ public class student {
 		this.photo = photo;
 	}
 
-	public student(int id, String name, String city, String aadhar, String sclass, String school, LocalDateTime date,
-			byte[] photo) {
+
+
+	public studentFirst() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public studentFirst(int id, String name, String city, String aadhar, String sclass, String school,
+			LocalDateTime date, byte[] photo) {
 		super();
 		this.id = id;
 		this.name = name;

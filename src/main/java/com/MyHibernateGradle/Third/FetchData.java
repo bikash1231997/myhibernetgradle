@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.MyHibernateGradle.First.student;
+import com.MyHibernateGradle.First.studentFirst;
 
 public class FetchData {
 
@@ -14,7 +14,7 @@ public class FetchData {
 		SessionFactory factory= cfg.buildSessionFactory();
 		Session session=factory.openSession();
 		
-		student std= (student)session.get(student.class, 5);
+		studentFirst std= (studentFirst)session.get(studentFirst.class, 5);
 		
 		System.out.println(std.getName()+" "+std.getId());
 		

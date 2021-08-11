@@ -9,24 +9,35 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "Std_Phone")
+@Table(name = "tbl_Std_Phone")
 public class Phone {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int phone_id;
 	
-	@OneToOne(mappedBy = "phone")
 	private long phone_no;
+	
+	@OneToOne(mappedBy = "phone")
+	private student stdph;
 
 	public Phone() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Phone(int phone_id, long phone_no) {
+	public Phone(int phone_id, long phone_no, student stdph) {
 		super();
 		this.phone_id = phone_id;
 		this.phone_no = phone_no;
+		this.stdph = stdph;
+	}
+
+	public student getStdph() {
+		return stdph;
+	}
+
+	public void setStdph(student stdph) {
+		this.stdph = stdph;
 	}
 
 	public int getPhone_id() {

@@ -9,7 +9,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.MyHibernateGradle.First.student;
+import com.MyHibernateGradle.First.studentFirst;
 
 public class MainHibernateGradle {
 
@@ -26,14 +26,14 @@ public class MainHibernateGradle {
 		// factory.getCurrentSession();
 
 		LocalDateTime nowdate = LocalDateTime.now();
-		
+
 		@SuppressWarnings("resource")
 		FileInputStream file = new FileInputStream("/home/axelor/backup/2021-04-15.jpg");
-		byte[] photos=new byte[file.available()];
+		byte[] photos = new byte[file.available()];
 		file.read(photos);
 
-		student st = new student();
-		//st.setId(10);
+		studentFirst st = new studentFirst();
+		// st.setId(10);
 		st.setName("bikash");
 		st.setCity("bbsr");
 		st.setAadhar("789456123123");
@@ -41,12 +41,12 @@ public class MainHibernateGradle {
 		st.setSclass("10th");
 		st.setDate(nowdate);
 		st.setPhoto(photos);
-		//System.out.println(st);
-		
+		// System.out.println(st);
+
 		Session session = factory.openSession();
 
 		// session.beginTransaction();
-		//abc
+		// abc
 		Transaction tx = session.beginTransaction();
 
 		session.save(st);

@@ -16,7 +16,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="Student")
+@Table(name="tbl_Student1")
 public class student {
 
 	@Id
@@ -30,14 +30,72 @@ public class student {
 	@OneToOne
 	private Phone phone;
 	
-	@OneToMany(mappedBy = "addLine")
+	@OneToMany(mappedBy = "stdadds")
 	private List<StdAddress> add;
 	
 	@ManyToOne
 	private Department dept;
 	
 	@ManyToMany
-	private Subject sub;
+	private List<Subject> sub;
+
+	public student(int id, String name, Phone phone, List<StdAddress> add, Department dept, List<Subject> sub) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+		this.add = add;
+		this.dept = dept;
+		this.sub = sub;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Phone getPhone() {
+		return phone;
+	}
+
+	public void setPhone(Phone phone) {
+		this.phone = phone;
+	}
+
+	public List<StdAddress> getAdd() {
+		return add;
+	}
+
+	public void setAdd(List<StdAddress> add) {
+		this.add = add;
+	}
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+
+	public List<Subject> getSub() {
+		return sub;
+	}
+
+	public void setSub(List<Subject> sub) {
+		this.sub = sub;
+	}
 
 	public student() {
 		super();

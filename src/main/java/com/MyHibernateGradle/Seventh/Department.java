@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Std_Dept")
+@Table(name = "tbl_Std_Dept")
 public class Department {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -19,8 +19,23 @@ public class Department {
 	private String deptName;
 
 	@OneToMany(mappedBy = "dept")
-	private List<student> students;
+	private List<student> stds;
 	
+	public List<student> getStds() {
+		return stds;
+	}
+
+	public void setStds(List<student> stds) {
+		this.stds = stds;
+	}
+
+	public Department(int dept_id, String deptName, List<student> stds) {
+		super();
+		this.dept_id = dept_id;
+		this.deptName = deptName;
+		this.stds = stds;
+	}
+
 	public Department() {
 		super();
 		// TODO Auto-generated constructor stub

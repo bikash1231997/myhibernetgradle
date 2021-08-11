@@ -15,13 +15,19 @@
 
 		<property name="show_sql">true</property>
 
-		<mapping class="com.MyHibernateGradle.First.student" />
+		<mapping class="com.MyHibernateGradle.First.studentFirst" />
 		<mapping class="com.MyHibernateGradle.Fourth.MyOneToOne" />
 		<mapping class="com.MyHibernateGradle.Fourth.Answer" />
 		<mapping class="com.MyHibernateGradle.Fifth.Answernew" />
 		<mapping class="com.MyHibernateGradle.Fifth.Questions" />
 		<mapping class="com.MyHibernateGradle.Sixth.Employee" />
 		<mapping class="com.MyHibernateGradle.Sixth.Project" />
+
+		<mapping class="com.MyHibernateGradle.Seventh.student" />
+		<mapping class="com.MyHibernateGradle.Seventh.Phone" />
+		<mapping class="com.MyHibernateGradle.Seventh.StdAddress" />
+		<mapping class="com.MyHibernateGradle.Seventh.Department" />
+		<mapping class="com.MyHibernateGradle.Seventh.Subject" />
 
 	</session-factory>
 </hibernate-configuration>
