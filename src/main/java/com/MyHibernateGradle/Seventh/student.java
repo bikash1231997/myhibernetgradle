@@ -16,7 +16,6 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="tbl_Student1")
 public class student {
 
 	@Id
@@ -30,7 +29,7 @@ public class student {
 	@OneToOne
 	private Phone phone;
 	
-	@OneToMany(mappedBy = "stdadds")
+	@OneToMany
 	private List<StdAddress> add;
 	
 	@ManyToOne

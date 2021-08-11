@@ -7,10 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "tbl_Std_Sub")
 public class Subject {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)

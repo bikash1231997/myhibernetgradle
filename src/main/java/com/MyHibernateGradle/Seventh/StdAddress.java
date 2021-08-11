@@ -8,33 +8,15 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tbl_Std_Add")
 public class StdAddress {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int addr_id;
-	
+
 	private String addLine;
-	
+
 	@ManyToOne
 	private student stdadds;
-
-	
-
-	public StdAddress(int addr_id, String addLine, student stdadds) {
-		super();
-		this.addr_id = addr_id;
-		this.addLine = addLine;
-		this.stdadds = stdadds;
-	}
-
-	public student getStdadds() {
-		return stdadds;
-	}
-
-	public void setStdadds(student stdadds) {
-		this.stdadds = stdadds;
-	}
 
 	public int getAddr_id() {
 		return addr_id;
@@ -50,6 +32,21 @@ public class StdAddress {
 
 	public void setAddLine(String addLine) {
 		this.addLine = addLine;
+	}
+
+	public student getStdadds() {
+		return stdadds;
+	}
+
+	public void setStdadds(student stdadds) {
+		this.stdadds = stdadds;
+	}
+
+	public StdAddress(int addr_id, String addLine, student stdadds) {
+		super();
+		this.addr_id = addr_id;
+		this.addLine = addLine;
+		this.stdadds = stdadds;
 	}
 
 	public StdAddress() {
