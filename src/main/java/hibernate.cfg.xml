@@ -20,6 +20,8 @@
 		<mapping class="com.MyHibernateGradle.Fourth.Answer" />
 		<mapping class="com.MyHibernateGradle.Fifth.Answernew" />
 		<mapping class="com.MyHibernateGradle.Fifth.Questions" />
+		<mapping class="com.MyHibernateGradle.Sixth.Employee" />
+		<mapping class="com.MyHibernateGradle.Sixth.Project" />
 
 	</session-factory>
 </hibernate-configuration>
