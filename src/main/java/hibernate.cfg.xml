@@ -11,9 +11,10 @@
 		<property name="hibernate.connection.password">axelor</property>
 		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/axelordb</property>
 
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 
 		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
 
 		<mapping class="com.MyHibernateGradle.First.studentFirst" />
 		<mapping class="com.MyHibernateGradle.Fourth.MyOneToOne" />

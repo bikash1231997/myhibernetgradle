@@ -80,6 +80,10 @@ public class StudentMain {
 		s2.setAdd(addlist2);
 		s3.setAdd(addlist3);
 		s4.setAdd(addlist4);
+		
+		add1.setStdadds(s1);
+		add1.setStdadds(s2);
+		add2.setStdadds(s2);
 
 		Department dpt = new Department();
 
